@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://dk8j817e6f46v"]
+
+[ext_resource type="Script" uid="uid://dhaaim40w806x" path="res://levels.gd" id="1_283no"]
+[ext_resource type="Texture2D" uid="uid://83tu5hi5v3ln" path="res://images/river-night-forest-mountain-nature-vector-cartoon-landscape-green-grass-tree-moon-light-scene-beauti/2305.w026.n002.3589B.p1.3589.jpg" id="2_283no"]
+[ext_resource type="Texture2D" uid="uid://4ni4khu7mkv3" path="res://images/Screenshot_2026-11-15_123121-removebg-preview.png" id="3_8ecpo"]
+[ext_resource type="Texture2D" uid="uid://c3femsyyijpih" path="res://images/Screenshot_2026-11-15_123126-removebg-preview.png" id="4_kpxkt"]
+[ext_resource type="Texture2D" uid="uid://cugkbus3m52ds" path="res://images/Screenshot_2026-11-15_123131-removebg-preview.png" id="5_d8u8u"]
+[ext_resource type="FontFile" uid="uid://0n3o4kdr7gxt" path="res://images/pixel-game/Pixel Game.otf" id="5_gotub"]
+[ext_resource type="Texture2D" uid="uid://cjqho7r2ttp4w" path="res://images/depositphotos_911226636-stock-illustration-pixel-art-vector-illustration-cute-removebg-preview.png" id="6_d8u8u"]
+[ext_resource type="Texture2D" uid="uid://djrv3127rj8ml" path="res://images/images-removebg-preview.png" id="7_gxjwj"]
+[ext_resource type="Texture2D" uid="uid://b5ool6uqgpq3g" path="res://images/apple.png" id="8_f8e78"]
+[ext_resource type="Texture2D" uid="uid://i6yjsen0jh12" path="res://images/images-removebg-preview (1).png" id="9_yx8qv"]
+[ext_resource type="AudioStream" uid="uid://drvqjwvw0g4fp" path="res://images/massobeats - gingersweet (freetouse.com).mp3" id="11_8ecpo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e67v7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hdryj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvfmt"]
+font = ExtResource("5_gotub")
+font_size = 300
+font_color = Color(0.984711, 0.8531159, 1.0781288e-05, 1)
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Mainmenu" type="Control" unique_id=1640212919]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_283no")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1945473020]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -74.5
+anchor_top = -37.0
+anchor_right = 75.337006
+anchor_bottom = 38.0
+offset_left = 2980.0
+offset_top = 1480.0
+offset_right = -2973.4802
+offset_bottom = -1480.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_283no")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=63926828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1935.0
+offset_top = -1100.0
+offset_right = 1895.0
+offset_bottom = 1130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=1396781214]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=762009838]
+layout_mode = 2
+
+[node name="Level 1" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1273454142]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e67v7")
+icon = ExtResource("3_8ecpo")
+
+[node name="Level2" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1441531044]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hdryj")
+icon = ExtResource("4_kpxkt")
+
+[node name="Level3" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1080103996]
+layout_mode = 2
+icon = ExtResource("5_d8u8u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1995121345]
+zoom = Vector2(0.3, 0.3)
+
+[node name="Label" type="Label" parent="." unique_id=326026497]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -17.0
+anchor_top = -23.425001
+anchor_right = 19.675001
+anchor_bottom = -12.975
+offset_left = -115.0
+offset_top = 114.00006
+offset_right = -6.1035156e-05
+grow_horizontal = 2
+text = "Foxy foraging"
+label_settings = SubResource("LabelSettings_wvfmt")
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1635236132]
+layout_mode = 0
+offset_left = -1562.0
+offset_top = -605.0
+offset_right = -727.0
+offset_bottom = 164.0
+texture = ExtResource("6_d8u8u")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1267196750]
+layout_mode = 0
+offset_left = 1249.0
+offset_top = -710.0
+offset_right = 1729.0
+offset_bottom = -230.0
+texture = ExtResource("7_gxjwj")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=459759488]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 45.0
+offset_right = 1715.0
+offset_bottom = 1118.0
+texture = ExtResource("8_f8e78")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1944381710]
+layout_mode = 0
+offset_left = -1675.0
+offset_top = 267.0
+offset_right = -887.0
+offset_bottom = 960.0
+texture = ExtResource("9_yx8qv")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=463995727]
+stream = ExtResource("11_8ecpo")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Level 1" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Level2" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]

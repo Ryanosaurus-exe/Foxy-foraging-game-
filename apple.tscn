@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cidlfe7cjqkl3"]
+
+[ext_resource type="Texture2D" uid="uid://b5ool6uqgpq3g" path="res://images/apple.png" id="1_3ed3y"]
+[ext_resource type="Script" uid="uid://cm2h70el6j8vs" path="res://treespawner.gd" id="1_n78qv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvfmt"]
+radius = 97.020615
+
+[node name="Apple" type="Area2D" unique_id=1938904169]
+script = ExtResource("1_n78qv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1590562543]
+position = Vector2(49, 27.000015)
+scale = Vector2(0.6503906, 0.64453125)
+texture = ExtResource("1_3ed3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597425477]
+shape = SubResource("CircleShape2D_wvfmt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2101100084]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

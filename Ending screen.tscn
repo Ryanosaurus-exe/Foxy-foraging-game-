@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://cx0u8wmtdu4ip"]
+
+[ext_resource type="Texture2D" uid="uid://oiekmpdvadlx" path="res://images/Screenshot_2026-11-15_123104-removebg-preview.png" id="1_1uqku"]
+[ext_resource type="Script" uid="uid://dqb7lmk3tdku5" path="res://ending_screen.gd" id="1_c6cus"]
+[ext_resource type="Texture2D" uid="uid://ctiatcxkupogm" path="res://images/Screenshot_2026-11-15_123054-removebg-preview.png" id="2_c6cus"]
+[ext_resource type="Texture2D" uid="uid://83tu5hi5v3ln" path="res://images/river-night-forest-mountain-nature-vector-cartoon-landscape-green-grass-tree-moon-light-scene-beauti/2305.w026.n002.3589B.p1.3589.jpg" id="2_mnqei"]
+[ext_resource type="FontFile" uid="uid://0n3o4kdr7gxt" path="res://images/pixel-game/Pixel Game.otf" id="5_v6rkr"]
+[ext_resource type="Texture2D" uid="uid://dhhgvrdm0kwfg" path="res://images/images-removebg-preview (2).png" id="6_n0jbk"]
+[ext_resource type="Script" uid="uid://csvwi1r6gw23c" path="res://flippyfloppy.gd" id="7_e7qdd"]
+[ext_resource type="AudioStream" uid="uid://drvqjwvw0g4fp" path="res://images/massobeats - gingersweet (freetouse.com).mp3" id="8_e7qdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hdryj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnqei"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvfmt"]
+font = ExtResource("5_v6rkr")
+font_size = 400
+font_color = Color(0.984711, 0.8531159, 1.0781288e-05, 1)
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cvyon"]
+font = ExtResource("5_v6rkr")
+font_size = 200
+font_color = Color(0.984711, 0.8531159, 1.0781288e-05, 1)
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[node name="endng" type="CanvasLayer" unique_id=2004226753]
+layer = 10
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
+script = ExtResource("1_c6cus")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=787141192]
+anchors_preset = -1
+anchor_left = -0.76400006
+anchor_top = -0.40100002
+anchor_right = 4.4440002
+anchor_bottom = 4.228
+offset_left = 0.12805176
+offset_top = -0.15197754
+offset_right = 0.51171875
+offset_bottom = 0.25585938
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mnqei")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=63926828]
+anchors_preset = -1
+anchor_right = 3.3290002
+anchor_bottom = 3.292
+offset_right = 1.6582031
+offset_bottom = 110.11719
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=1396781214]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=762009838]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="QuitButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1441531044]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hdryj")
+icon = ExtResource("1_1uqku")
+
+[node name="Levels" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1867650635]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mnqei")
+icon = ExtResource("2_c6cus")
+
+[node name="Label" type="Label" parent="." unique_id=1889198546]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -339.33334
+offset_top = 180.0
+offset_right = 3050.6665
+offset_bottom = 646.6666
+grow_horizontal = 2
+text = "You win!"
+label_settings = SubResource("LabelSettings_wvfmt")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1818070289]
+anchors_preset = -1
+anchor_left = 2.3900461
+anchor_top = 2.0987654
+anchor_right = 2.9484951
+anchor_bottom = 3.0504112
+offset_left = 0.00024414063
+texture = ExtResource("6_n0jbk")
+script = ExtResource("7_e7qdd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=1298186662]
+offset_left = 2616.6665
+offset_top = 783.3334
+offset_right = 3676.6665
+offset_bottom = 1100.0
+text = "The foxies 
+thank you <3"
+label_settings = SubResource("LabelSettings_cvyon")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=885585151]
+stream = ExtResource("8_e7qdd")
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer" parent="AudioStreamPlayer2D" unique_id=1506741775]
+stream = ExtResource("8_e7qdd")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
